@@ -1,0 +1,2 @@
+class RankMovie < ApplicationRecord
+end
