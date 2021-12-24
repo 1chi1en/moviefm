@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'ranks#index'
-  resources :ranks
-  resources :movies
-  resources :assesments
-
-
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
