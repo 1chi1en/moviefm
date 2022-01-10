@@ -14,7 +14,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'b33dce59369274f8a21908e97bf8c6e6f77b82b4ad94c08714a5f04ebd5c90eb8aa7da18947397d403b84a18b7a2b4fabc3916c86138ed243d990817ec7ce002'
+  # config.secret_key = 'f13d2c739d11d74b4cfd158e07813cd333a020f367d6b6d9a0d77350bc154b03bdd230ec8c36644c241b68b96a0b4c275c61c6177a8240da6888c7098df0d7f0'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -58,12 +58,12 @@ Devise.setup do |config|
   # Configure which authentication keys should be case-insensitive.
   # These keys will be downcased upon creating or modifying a user and when used
   # to authenticate or find a user. Default is :email.
-  config.case_insensitive_keys = [:email]
+  #config.case_insensitive_keys = [:email]
 
   # Configure which authentication keys should have whitespace stripped.
   # These keys will have whitespace before and after removed upon creating or
   # modifying a user and when used to authenticate or find a user. Default is :email.
-  config.strip_whitespace_keys = [:email]
+  #config.strip_whitespace_keys = [:email]
 
   # Tell if authentication through request.params is enabled. True by default.
   # It can be set to an array that will enable params authentication only for the
@@ -126,7 +126,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '8dc18db3a46f7346babe7cd0a7cca0032c28d90b9d9ad93842a9cb83422c8e61b58df412d1dde60477d0f192e86471dd7dbe3a61e0526788ead4865e64c72f51'
+  # config.pepper = 'bf9d28e477b4730e4648f36cd0bc4885e46e234fd3bde22f33f376f55833211a3a57907936106b4a5236bf3f4ffc73e96462d7fc316540ca83b08c9b172ee00d'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -183,7 +183,7 @@ Devise.setup do |config|
   # Email regex used to validate email formats. It simply asserts that
   # one (and only one) @ exists in the given string. This is mainly
   # to give user feedback and not to assert the e-mail validity.
-  config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+  #config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
 
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
