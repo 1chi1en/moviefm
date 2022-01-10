@@ -16,16 +16,21 @@
     <br>
     <h1>Movie for me</h1>
     <br>
+    <h2>映画を追加する</h2>
     <div class="border col-7">
         <br>
-        <h2>映画を追加する</h2>
         <br>
-
         <% @movies.each do |mov| %>
-  <div class="post">
-      <%= mov.title %>
-  </div>
-<% end %>
+          <table class="table">
+            <div class="post">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col"><%= mov.title %></th>
+                </tr>
+              </thead>
+            </div>
+          </table>
+        <% end %>
 
         <div class="col-1">
         </div>

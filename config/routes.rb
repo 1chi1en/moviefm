@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   resources :ranks
   resources :movies
   resources :assesments
-
   
+
 end
