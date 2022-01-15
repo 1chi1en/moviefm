@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'movies#index'
   resources :ranks
   resources :movies
-  resources :assesments
+  resources :assessments
   
 
 end
