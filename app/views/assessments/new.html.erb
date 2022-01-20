@@ -16,26 +16,33 @@
     <br>
     <h1>Movie for me</h1>
     <br>
- <%= form_with model: @movie, class: 'article-form', local: true do |mov| %>
+ <%= form_with model: @assessment, class: 'article-form', local: true do |f| %>
     <div class="border col-7">
         <br>
-        <h2>映画を追加する</h2>
+        <h2>映画の感想を書く</h2>
         <br>
         <div class="row">
             <div class="col-md">
-            <%= name %>
                     <div class="form-group">
-                        <label>映画タイトル：</label>
-                        <%= mov.text_field :title, class:"form-control", id:"title"%>
+                        <label>感想：</label>
+                        <%= f.text_area :impression, class:"form-control", id:"title"%>
                     </div>
+                    
                     <div class="form-group">
-                        <label>監督：</label>
-                        <%= mov.text_field :director, class:"form-control", id:"director"%>
+                        <label>点数：</label>
+                        <%= f.text_field :rate, class:"form-control", id:"director"%>
                     </div>
+
                     <div class="form-group">
-                        <label>公開日：</label>
-                        <%= mov.text_field :release, class:"form-control", id:"release"%>
+                        <label>良かった点：</label>
+                        <%= f.text_area :goodthings, class:"form-control", id:"release"%>
                     </div>
+
+                    <div class="form-group">
+                        <label>良くなかった点：</label>
+                        <%= f.text_area :badthings, class:"form-control", id:"release"%>
+                    </div>
+
             </div>
         </div>
         <div class="row center-block text-center">
@@ -45,7 +52,7 @@
                 <button type="button" class="btn btn-outline-secondary btn-block">閉じる</button>
             </div>
             <div class="col-5">
-            <%= mov.submit "映画を登録する" ,class:"btn btn-outline-primary btn-block" %>
+            <%= f.submit "映画を登録する" ,class:"btn btn-outline-primary btn-block" %>
             </div>
         </div>
 

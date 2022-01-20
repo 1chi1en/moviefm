@@ -20,12 +20,12 @@
     <div class="border col-7">
         <br>
         <br>
-        <% @movies.each do |mov| %>
+        <% @movie.each do |mov| %>
           <table class="table">
             <div class="post">
               <thead class="thead-dark">
                 <tr>
-                  <th scope="col"><%= mov.title %></th>
+                  <th scope="col"><%= link_to mov.title, edit_movie_path(mov.id), method: :get %></th>
                 </tr>
               </thead>
             </div>
