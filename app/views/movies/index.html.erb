@@ -19,6 +19,9 @@
     <h2>映画を追加する</h2>
     <div class="border col-7">
         <br>
+        <%= link_to 'あっっち', new_user_registration_path %>
+
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
         <br>
         <% @movie.each do |mov| %>
           <table class="table">

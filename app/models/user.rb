@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :ranks
 
-  validates :email, uniqueness: true
+  #validates :email, uniqueness: true
 
   validates :name, presence: true, uniqueness: true
 
@@ -18,4 +18,6 @@ class User < ApplicationRecord
   def email_changed?
     false
   end
+
+  
 end
