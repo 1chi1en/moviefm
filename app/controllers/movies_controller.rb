@@ -6,10 +6,10 @@ class MoviesController < ApplicationController
 
   def new
     @movie = Movie.new
+    name = User.pluck(:name)
   end
 
   def create
-
     @movie = Movie.new(movie_params)
     if @movie.save
       redirect_to root_path
@@ -17,6 +17,7 @@ class MoviesController < ApplicationController
       render :new
     end
   end
+
 
   def edit
     @movie = Movie.find(params[:id])

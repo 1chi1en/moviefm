@@ -1,5 +1,8 @@
 class Movie < ApplicationRecord
 
-  belongs_to :ranks
+  has_many :ranks, through: :rank_movies
+  has_many :rank_movies
+
+  has_many :assessments
 
 end
