@@ -6,6 +6,7 @@ class CreateAssessments < ActiveRecord::Migration[6.0]
       t.float     :rate
       t.text      :goodthings
       t.text      :badthings
+      t.integer   :user_id
 
       t.timestamps
     end

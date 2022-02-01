@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :ranks
+  has_many :movies
+  has_many :assessments
 
   #validates :email, uniqueness: true
 
