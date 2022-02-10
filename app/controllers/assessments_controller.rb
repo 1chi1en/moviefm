@@ -5,7 +5,7 @@ class AssessmentsController < ApplicationController
   end
 
   def create
-    @assessment = Assessment.new
+    @assessment = Assessment.new(a_params)
     if @assessment.save
       redirect_to root_path
     else
@@ -15,8 +15,8 @@ class AssessmentsController < ApplicationController
 
   private
 
-  def assess_params
-    params.require(:assessment).permit(:impression, :rate, :goodthings, :badthings)
+  def a_params
+    params.require(:assessment).permit(:impression, :rate, :goodthings, :badthings).merge(user_id: current_user.id)
   end
-
+  
 end

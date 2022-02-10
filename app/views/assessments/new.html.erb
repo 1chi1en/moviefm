@@ -21,26 +21,29 @@
         <br>
         <h2>映画の感想を書く</h2>
         <br>
+        ※ユーザーが任意の映画を自分のランキングに登録した後でなければこの画面を呼び出して記述はできない
+        <br>
+
         <div class="row">
             <div class="col-md">
                     <div class="form-group">
                         <label>感想：</label>
-                        <%= f.text_area :impression, class:"form-control", id:"title"%>
+                        <%= f.text_area :impression, class:"form-control", id:"impression"%>
                     </div>
                     
                     <div class="form-group">
                         <label>点数：</label>
-                        <%= f.text_field :rate, class:"form-control", id:"director"%>
+                        <%= f.text_field :rate, class:"form-control", id:"rate"%>
                     </div>
 
                     <div class="form-group">
                         <label>良かった点：</label>
-                        <%= f.text_area :goodthings, class:"form-control", id:"release"%>
+                        <%= f.text_area :goodthings, class:"form-control", id:"goodthings"%>
                     </div>
 
                     <div class="form-group">
                         <label>良くなかった点：</label>
-                        <%= f.text_area :badthings, class:"form-control", id:"release"%>
+                        <%= f.text_area :badthings, class:"form-control", id:"badthings"%>
                     </div>
 
             </div>
@@ -52,7 +55,7 @@
                 <button type="button" class="btn btn-outline-secondary btn-block">閉じる</button>
             </div>
             <div class="col-5">
-            <%= f.submit "映画を登録する" ,class:"btn btn-outline-primary btn-block" %>
+            <%= f.submit "感想を登録する" ,class:"btn btn-outline-primary btn-block" %>
             </div>
         </div>
 
